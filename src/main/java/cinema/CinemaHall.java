@@ -1,35 +1,26 @@
 package cinema;
 
-import movie.IMovie;
-
-import java.util.ArrayList;
+import movie.IMovieShow;
 import java.util.List;
 
 public class CinemaHall implements ICinemaHall {
 
-    private Cinema cinema;
     private Integer number;
     private Integer numberOfPlaces;
-    private PlaceType placeType;
-    private List<IMovie> moviesRunning;
-    private List<Integer> freeSeatsLeft;
+    private List<IMovieShow> moviesRunning;
+    private ICinema cinema;
 
-    public CinemaHall(Cinema cinema, Integer number, Integer numberOfPlaces, PlaceType placeType, List<IMovie> movies){
-        this.cinema=cinema;
+
+
+    public CinemaHall( Integer number, Integer numberOfPlaces, List<IMovieShow> movieShows){
         this.number=number;
         this.numberOfPlaces=numberOfPlaces;
-        this.placeType=placeType;
-        this.moviesRunning=movies;
-        freeSeatsLeft=new ArrayList<Integer> (moviesRunning.size());
-        for (IMovie movie:moviesRunning){
-            freeSeatsLeft.add(numberOfPlaces);
-        }
-    }
+        this.moviesRunning=movieShows;
+        for(IMovieShow show: movieShows){}
 
-
-    public ICinema getCinema () {
-        return cinema;
     }
+    public List<IMovieShow> getMovieShows()
+    {return moviesRunning;}
 
     public Integer getNumber () {
         return number;
@@ -38,8 +29,10 @@ public class CinemaHall implements ICinemaHall {
     public Integer getNumberOfPlaces () {
         return numberOfPlaces;
     }
-
-    public PlaceType getPlaceType () {
-        return placeType;
+    public ICinema getCinema(){
+        return cinema;
+    }
+    public void setCinema(ICinema cinema){
+        this.cinema=cinema;
     }
 }

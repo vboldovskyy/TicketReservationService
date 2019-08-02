@@ -3,22 +3,18 @@ package movie;
 import java.util.Date;
 
 public class Movie implements IMovie {
-    private String name;
-    private MovieType type;
-    private Date startTime;
-    private Date endTime;
-    private MovieStatus status;
-    private MovieCategory category;
-    private Integer price;
+    private final String name;
+    private final MovieType type;
+    private final Integer duration;
+    private final MovieStatus status;
+    private final MovieCategory category;
 
-    public Movie( String name, MovieType type, Date start, Date end, MovieStatus status, MovieCategory category, Integer price){
+    public Movie( String name, MovieType type, Integer duration, MovieStatus status, MovieCategory category){
         this.name=name;
         this.type=type;
-        this.startTime=start;
-        this.endTime=end;
+        this.duration=duration;
         this.status=status;
         this.category=category;
-        this.price=price;
     }
 
     public String getName () {
@@ -29,14 +25,6 @@ public class Movie implements IMovie {
         return type;
     }
 
-    public Date getMovieDurationFrom () {
-        return startTime;
-    }
-
-    public Date getMovieDurationTo () {
-        return endTime;
-    }
-
     public MovieStatus getMovieStatus () {
         return status;
     }
@@ -45,7 +33,8 @@ public class Movie implements IMovie {
         return category;
     }
 
-    public Integer getPrice () {
-        return price;
+    @Override
+    public Integer getDuration() {
+        return duration;
     }
 }

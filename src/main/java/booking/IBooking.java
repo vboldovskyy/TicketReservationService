@@ -1,13 +1,13 @@
 package booking;
 
-import movie.IMovie;
+import movie.IMovieShow;
 
 import java.util.Date;
 
 public interface IBooking {
 Date getBookedDate();
 boolean isPaid();
-IMovie getBookedMovie();
+IMovieShow getBookedMovieShow();
 Integer getNumberOfBookings();
 Integer getBookingId();
 }

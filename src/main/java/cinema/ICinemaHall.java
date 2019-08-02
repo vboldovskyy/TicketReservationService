@@ -1,8 +1,13 @@
 package cinema;
 
+import movie.IMovieShow;
+
+import java.util.List;
+
 public interface ICinemaHall {
-    ICinema getCinema();
     Integer getNumber();
     Integer getNumberOfPlaces();
-    PlaceType getPlaceType();
+    List<IMovieShow> getMovieShows();
+    ICinema getCinema();
+    void setCinema(ICinema cinema);
 }
