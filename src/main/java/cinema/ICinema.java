@@ -8,5 +8,6 @@ public interface ICinema {
     String getAddress();
     Double getRating();
     List<IMovie> getListOfMovies();
+    List<ICinemaHall> getCinemaHalls();
 
 }

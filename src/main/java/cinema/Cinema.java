@@ -39,7 +39,12 @@ public class Cinema implements ICinema {
         return null;
     }
 
-    public List<ICinemaHall> getListOfCinemaHalls() {
+    public String toString(){
+        return name + " at "+ address + ". Rating "+rating+"\n";
+
+    }
+
+    public List<ICinemaHall> getCinemaHalls() {
         return cinemaHalls;
     }
 

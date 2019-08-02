@@ -21,17 +21,15 @@ public class MovieShow implements IMovieShow{
         this.bookedPlaces = new boolean[ROWS][SEATS_PER_ROW];
     }
 
-    public IMovie getMovie(){
-        return movie;
-    }
-
     public void setCinemaHall(CinemaHall cinemaHall){
         hall=cinemaHall;
     }
     public CinemaHall getCinemaHall(){
         return hall;
     }
-
+    public IMovie getMovie(){
+        return movie;
+    }
 
     @Override
     public Date getMovieStartDate() {

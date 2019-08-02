@@ -20,6 +20,8 @@ public class MovieHolder {
                 MovieStatus.AVAILABLE, MovieCategory.COMEDY));
         movies.put("Blade Runner", new Movie("Blade Runner", MovieType.ORIGINAL, 103,
                 MovieStatus.AVAILABLE, MovieCategory.THRILLER));
+        movies.put("Nightmare on Elms street", new Movie("Nightmare on Elms street", MovieType.TRANSLATED, 123,
+                MovieStatus.AVAILABLE, MovieCategory.HORROR));
     }
     public static IMovie getMovie(String name){
         return movies.get(name);

@@ -10,4 +10,5 @@ public interface IMovieShow {
     CinemaHall getCinemaHall();
     void setCinemaHall(CinemaHall hall);
     Integer getPrice();
+    IMovie getMovie();
 }

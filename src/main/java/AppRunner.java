@@ -1,3 +1,4 @@
+import cinema.CinemaHolder;
 import user.IUser;
 import user.User;
 import user.UserHolder;
@@ -34,11 +35,11 @@ public class AppRunner {
             switch (input) {
 
                 case ALL_CINEMAS:
-
+                    CinemaHolder.printCinemas();
                     break;
 
                 case MORE_INFORMATION:
-
+                    CinemaHolder.printMovieShows();
                     break;
 
                 case ALL_MOVIES:
