@@ -1,4 +1,5 @@
 import cinema.CinemaHolder;
+import movie.MovieHolder;
 import user.IUser;
 import user.User;
 import user.UserHolder;
@@ -43,7 +44,7 @@ public class AppRunner {
                     break;
 
                 case ALL_MOVIES:
-
+                    MovieHolder.printAll();
                     break;
 
                 case MOVIES_BY_NAME:
@@ -51,7 +52,7 @@ public class AppRunner {
                     break;
 
                 case MOVIES_SEARCH:
-
+                    MovieHolder.search();
                     break;
 
                 case BUY_TICKETS:

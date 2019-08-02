@@ -8,6 +8,7 @@ public interface IMovie {
     MovieStatus getMovieStatus();
     MovieCategory getCategory();
     Integer getDuration();
+    Double getRating();
 
 
 }
