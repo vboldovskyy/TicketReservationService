@@ -11,12 +11,12 @@ public class Cinema implements ICinema {
     private List<ICinemaHall> cinemaHalls;
     private List<IMovie> listOfMovies;
 
-    public Cinema(String name, String address, Double rating, List<ICinemaHall> cinemaHalls) {
+    Cinema(String name, String address, Double rating, List<ICinemaHall> cinemaHalls) {
         this.name = name;
         this.address = address;
         this.rating = rating;
         this.cinemaHalls = cinemaHalls;
-        for (ICinemaHall hall :cinemaHalls){
+        for (ICinemaHall hall : cinemaHalls) {
             hall.setCinema(this);
         }
     }
@@ -39,8 +39,8 @@ public class Cinema implements ICinema {
         return null;
     }
 
-    public String toString(){
-        return name + " at "+ address + ". Rating "+rating+"\n";
+    public String toString() {
+        return name + " at " + address + ". Rating " + rating;
 
     }
 

@@ -6,10 +6,22 @@ import java.util.List;
 
 public interface IUser {
     String getName();
+
     String getSurname();
+
     Integer getAge();
+
     String getEmail();
+
     String getPhoneNumber();
+
     Boolean isStudent();
+
     List<IBooking> getBookings();
+
+    void addBooking(IBooking booking);
+
+    Boolean canBookMore();
+
+    void printAllBookings();
 }
